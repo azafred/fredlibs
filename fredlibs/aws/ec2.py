@@ -1,10 +1,12 @@
-from boto import ec2
+import boto
+from operator import itemgetter
 
 def get_all_instances(region='us-east-1'):
-    instances = {}
-    conn = ec2.connect_to_region(region)
-    res = conn.get_all_instances()
-    for r in res:
+    instances = []
+    index = 1
+    conn = boto.connect_ec2()
+    reservations = conn.get_all_instances()
+    for res in reservations:
         for inst in res.instances:
             id = inst.id
             name = inst.tags.get('Name', 'NoName')

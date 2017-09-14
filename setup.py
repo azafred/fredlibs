@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-version = '0.0.1'
+from fredlibs.version import __version__
+version = __version__
 
 with open('README.rst') as f:
     readme = f.read()
@@ -19,6 +20,7 @@ setup(
     author='Fred Vassard',
     author_email='azafred@gmail.com',
     url='https://github.com/azafred/fredlibs',
+    download_url='https://github.com/azafred/fredlibs/archive/0.1.tar.gz',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
     install_requires=required,
