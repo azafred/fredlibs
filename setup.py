@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-from fredlibs.version import __version__
+from fredlibs.version import __version__ as version
 
 with open('README.rst') as f:
     readme = f.read()
@@ -13,7 +13,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='fredlibs',
-    version=__version__,
+    version=version,
     description='fredlibs package',
     long_description=readme,
     author='Fred Vassard',
@@ -24,15 +24,17 @@ setup(
     install_requires=required,
     tests_require=['nose', 'testfixtures', 'mock'],
     test_suite="nose.collector",
-    entry_points={
-        'console_scripts': [
-            'fredlibs = fredlibs.main:main'
-        ]
-    },
+    py_modules=['fredlibs'],
     classifiers=[
         'Topic :: Utilities',
         'Programming Language :: Python',
-        'Operating System :: MacOS'
+        'Operating System :: MacOS',
+        'Programming Language :: Python :: 2.4',
+        'Programming Language :: Python :: 2.5',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: BSD License'
     ]
 )
 

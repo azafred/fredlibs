@@ -1,5 +1,4 @@
-Sample Module Repository
-========================
+Fredlibs
+========
 
-This simple project is an example repo for Python projects.
-
+A set of libraries to be used in more complicated projects.
