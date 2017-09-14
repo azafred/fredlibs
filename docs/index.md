@@ -1,7 +1,7 @@
-# Sample
+# Fredlibs
 
 ## Purpose
-
+A Set of mofules / functions to re-use all those things I commonly copy and paste in various programs...
 
 
 ```
