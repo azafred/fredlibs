@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 git add .
-git commit -am '$@'
+git commit -am "$@"
 git push
 ./pushtag.sh
 VERSION=$(git describe --abbrev=0 --tags)
@@ -12,7 +12,7 @@ echo "=== Creating Egg ==="
 python2 ./setup.py bdist_egg
 echo "=== Building Documentation ==="
 python2 ./setup.py build_sphinx
-echo "=== Uploadig Documentation ==="
-python2 ./setup.py upload_sphinx
+# echo "=== Uploadig Documentation ==="
+# python2 ./setup.py upload_sphinx
 echo "=== Uploading to pypi ==="
 twine upload dist/*-${VERSION}*
