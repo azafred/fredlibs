@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-from fredlibs.version import __version__ as version
+version = '0.0.1'
 
 with open('README.rst') as f:
     readme = f.read()
